@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0d0054;
+  --background-blue: #0d0054;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+  color: var(--foreground);
+}
+
+@layer components{
+    :root {
+    --text-white: #ededed;
+    --link-font-size: 18px;
+    }
+
+    a{
+      @apply text-[var(--background-blue)] px-16 py-8;
+    }
+
+    .heading{
+      @apply text-[24px]
+    }
+
+    .carouselContainer{
+      @apply w-1/2 text-white bg-[var(--background-blue)];
+    }
+}
